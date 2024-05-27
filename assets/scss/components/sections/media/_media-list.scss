@@ -1,0 +1,22 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.media-list {
+  @include flex(space-between, center, row, $gap);
+
+  @media (max-width: $lg) {
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    @include block-img-width(100%);
+
+    @media (max-width: $lg) {
+      width: calc(100% / 3 - $gap-x2 / 3);
+    }
+
+    @media (max-width: $sm) {
+      width: calc(100% / 2 - $gap / 2);
+    }
+  }
+}

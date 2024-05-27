@@ -1,0 +1,54 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.help-left {
+  width: calc(60% - $gap-x4 / 2);
+  @include flex(flex-start, flex-start, column, $gap-x2);
+
+  @media (max-width: $lg) {
+    width: 100%;
+    align-items: center;
+  }
+
+  &__title {
+    @include title-style;
+
+    @media (max-width: $lg) {
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 1.75rem;
+      line-height: normal;
+    }
+  }
+
+  &__block {
+    @include flex(flex-start, flex-start, column, 28px);
+  }
+
+  .item {
+    @include flex(flex-start, flex-start, row, $gap);
+
+    &__icon {
+      @include block-img-height(40px);
+    }
+
+    &__text {
+      max-width: 440px;
+      @include text-custom(1rem, normal, 200);
+
+      @media (max-width: $lg) {
+        padding: 0;
+      }
+    }
+
+    @media (max-width: $sm) {
+      &:not(:first-of-type) {
+        strong {
+          font-weight: 200;
+        }
+      }
+    }
+  }
+}

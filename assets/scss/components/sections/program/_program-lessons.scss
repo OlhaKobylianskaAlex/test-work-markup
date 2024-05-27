@@ -1,0 +1,68 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.program-lessons {
+  width: 500px;
+
+  @media (max-width: $lg) {
+    width: 100%;
+  }
+
+  &__block {
+    height: 840px;
+    @include flex(flex-start, flex-start, column, 0);
+
+    border: 1px solid $color-light-black;
+    overflow-y: auto;
+
+    @media (max-width: $lg) {
+      height: 1120px;
+    }
+
+    @media (max-width: $sm) {
+      height: 1025px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    padding: 2rem 1rem;
+    @include flex(flex-start, center, row, 1rem);
+
+    .item {
+      &__icon {
+        height: 24px;
+        min-width: 24px;
+
+        @include flex(center, center);
+
+        background-color: $color-primary;
+        border-radius: 50%;
+
+        @include text-custom(0.75rem, normal, bold);
+      }
+
+      &__title {
+        font-size: 1.125rem;
+      }
+    }
+
+    &.active {
+      background-color: $color-primary-light;
+      font-weight: bold;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: $color-light-black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b4b4b4;
+  border-radius: 6px;
+}

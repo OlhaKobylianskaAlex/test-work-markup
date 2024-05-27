@@ -1,0 +1,84 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.who-block {
+  max-width: 1020px;
+  margin: 0 auto;
+
+  @include flex(flex-start, center, row, $gap);
+
+  overflow-y: scroll;
+
+  @media (max-width: $lg) {
+    margin-right: -80px;
+    padding-right: 80px;
+  }
+
+  @media (max-width: $sm) {
+    margin-right: -20px;
+    padding-right: 20px;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__item {
+    min-width: calc(100% / 3 - $gap-x2 / 3);
+    height: 484px;
+
+    @include flex(flex-end, center, column, 0);
+
+    background-color: gray;
+    color: $color-light;
+
+    &--1 {
+      background: url("../img/png/who/photo_1.png") no-repeat center bottom;
+      background-size: cover;
+    }
+
+    &--2 {
+      background: url("../img/png/who/photo_2.png") no-repeat center bottom;
+      background-size: cover;
+    }
+
+    &--3 {
+      background: url("../img/png/who/photo_3.png") no-repeat center bottom;
+      background-size: cover;
+    }
+
+    border-radius: 20px;
+
+    @media (max-width: $lg) {
+      min-width: 395px;
+    }
+
+    @media (max-width: $sm) {
+      height: 322px;
+      min-width: 294px;
+    }
+
+    .item-info {
+      height: 220px;
+      width: 100%;
+      padding: $gap;
+
+      @include linear(top);
+      @include flex(flex-end, center, column, 0.5rem);
+
+      &__title {
+        margin-bottom: 25px;
+        @include text-custom(1.5rem, normal, bold);
+      }
+
+      &__description,
+      &__addition {
+        @include text-custom(0.875rem, normal, 200, $color-light, center);
+      }
+
+      &__description {
+        color: $color-primary;
+      }
+    }
+  }
+}

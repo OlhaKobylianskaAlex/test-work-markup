@@ -1,0 +1,47 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.audience-list {
+  width: 100%;
+
+  @include flex(flex-start, space-evently, row, $gap);
+  flex-wrap: wrap;
+
+  @media (max-width: $sm) {
+    flex-direction: column;
+  }
+
+  &__item {
+    width: calc(25% - $gap-x3 / 4);
+    padding: $gap-x2 $gap;
+
+    @include flex(center, center, column, 1.5rem);
+
+    background-color: $color-black-light-2;
+
+    color: $color-light;
+    border-radius: $gap;
+
+    @media (max-width: $lg) {
+      width: calc(50% - $gap / 2);
+    }
+
+    @media (max-width: $sm) {
+      width: 100%;
+    }
+
+    .item {
+      &-img {
+        @include block-img-height(48px);
+      }
+
+      &-info {
+        @include text-custom(1rem, normal, bold, $color-light, center);
+      }
+
+      &-description {
+        @include text-custom(0.875rem, normal, 200, $color-light, center);
+      }
+    }
+  }
+}

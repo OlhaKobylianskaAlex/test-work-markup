@@ -1,0 +1,22 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header {
+  margin-top: 20px;
+  z-index: 100;
+
+  &-container {
+    @extend %container;
+
+    &__content {
+      height: 42px;
+      @include flex(space-between, center, row, $gap);
+    }
+  }
+
+  &-btn {
+    @media (max-width: $sm) {
+      display: none;
+    }
+  }
+}

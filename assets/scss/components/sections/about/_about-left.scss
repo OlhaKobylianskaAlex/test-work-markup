@@ -1,0 +1,26 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.about-left {
+  @include flex(flex-start, flex-start, column, 2rem);
+  color: $color-light;
+
+  &__title {
+    max-width: 440px;
+    @include title-style;
+
+    @media (max-width: $lg) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__description {
+    @include text-style;
+
+    @media (max-width: $lg) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

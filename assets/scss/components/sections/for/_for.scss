@@ -1,0 +1,18 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.for {
+  margin-top: $gap-x3;
+
+  &-container {
+    @extend %container;
+
+    &__content {
+      @include flex(space-between, flex-start, row, $gap);
+
+      @media (max-width: $lg) {
+        @include flex(space-between, flex-start, column-reverse, $gap-x2);
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "gulp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "browser-sync": "^2.27.5",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^5.0.8",
+    "gulp": "^4.0.2",
+    "gulp-csscomb": "^3.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "postcss": "^8.3.9",
+    "sass": "^1.43.2",
+    "sort-css-media-queries": "^2.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlhaKobylianskaAlex/test-work.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/OlhaKobylianskaAlex/test-work/issues"
+  },
+  "homepage": "https://github.com/OlhaKobylianskaAlex/test-work#readme",
+  "description": "",
+  "dependencies": {
+    "@types/intl-tel-input": "^18.1.4"
+  }
+}

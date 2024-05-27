@@ -1,0 +1,23 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.help-right {
+  width: calc(40% - $gap-x4 / 2);
+  @include flex(center, center);
+
+  @media (max-width: $lg) {
+    width: 100%;
+  }
+
+  &__block {
+    @include block-img-width(100%);
+
+    @media (max-width: $lg) {
+      padding: $gap $gap-x3;
+    }
+
+    @media (max-width: $sm) {
+      padding: $gap $gap-x2;
+    }
+  }
+}

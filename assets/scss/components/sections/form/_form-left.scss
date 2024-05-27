@@ -1,0 +1,147 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.form-left {
+  width: calc(50% - 1rem);
+  @include flex(flex-start, flex-start, column, 0.5rem);
+
+  @media (max-width: $lg) {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__info {
+    margin-bottom: 1.5rem;
+    @include flex(center, flex-start, column, $gap);
+
+    .item {
+      padding: 0;
+      margin: 0;
+      @include flex(flex-start, center, row, 1.5rem);
+
+      @media (max-width: $sm) {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      &__icons {
+        @include block-img-height(30px);
+
+        @include flex(center, center, row, 0.5rem);
+
+        @media (max-width: $xs) {
+          gap: 4px;
+        }
+      }
+
+      &__text {
+        @include text-custom(0.875rem, normal, 200, $color-light);
+      }
+
+      &.hidden-sm {
+        @media (max-width: $sm) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__title {
+    max-width: 300px;
+    @include title-style;
+    text-transform: uppercase;
+
+    @media (max-width: $lg) {
+      text-align: center;
+    }
+
+    @media (max-width: $sm) {
+      font-size: 2.25rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 4.5rem;
+    max-width: 380px;
+    @include text-custom(1.625rem, normal, bold);
+
+    @media (max-width: $lg) {
+      text-align: center;
+    }
+
+    @media (max-width: $sm) {
+      margin-bottom: calc($gap-x3 - 0.5rem);
+      font-size: 1.25rem;
+    }
+  }
+
+  &__text {
+    @include text-custom(1.25rem, normal, bold);
+    margin-bottom: calc($gap-x2 - 0.5rem);
+
+    @media (max-width: $lg) {
+      text-align: center;
+    }
+
+    @media (max-width: $sm) {
+      max-width: 260px;
+      font-size: 1rem;
+    }
+  }
+
+  &__limit {
+    @include flex(flex-start, flex-start, column, 0.5rem);
+
+    @media (max-width: $lg) {
+      align-items: center;
+    }
+
+    .limit {
+      &__text {
+        @include text-style;
+
+        @media (max-width: $sm) {
+          font-size: 0.875rem;
+        }
+      }
+
+      &__block {
+        @include flex(flex-start, center, row, 1rem);
+
+        &-item {
+          width: 88px;
+          height: 64px;
+
+          @include flex(center, center, column, 0.75rem);
+
+          background-color: $color-light;
+          color: $color-black;
+
+          border-radius: 10px;
+
+          @media (max-width: $lg) {
+            gap: 0.25rem;
+          }
+
+          @media (max-width: $sm) {
+            width: 60px;
+          }
+
+          .value {
+            @include text-custom(1.25rem, 1.625rem, bold, $color-black, center);
+
+            @media (max-width: $sm) {
+              font-size: 0.75rem;
+            }
+          }
+
+          .time {
+            @include text-custom(0.75rem, normal, 200, $color-black, center);
+          }
+        }
+      }
+    }
+  }
+}

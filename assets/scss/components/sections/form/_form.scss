@@ -1,0 +1,25 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.form {
+  width: 100%;
+  position: relative;
+
+  &-container {
+    @extend %container;
+
+    &__content {
+      width: 100%;
+
+      @include flex(space-between, center, row, $gap-x2);
+
+      @media (max-width: $lg) {
+        @include flex(center, center, column, $gap-x3);
+      }
+
+      @media (max-width: $sm) {
+        gap: $gap-x5;
+      }
+    }
+  }
+}

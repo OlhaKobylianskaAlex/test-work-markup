@@ -1,0 +1,98 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.btn {
+  padding: 0.75rem 2.75rem;
+  @include flex;
+
+  @include text-custom(0.875rem, normal, 200, $color-light);
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  &--light {
+    background-color: $color-black;
+    border: 1px solid $color-light;
+    text-transform: capitalize;
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    border: none;
+  }
+}
+
+.accent {
+  color: $color-primary;
+}
+
+.hidden-sm {
+  @media (max-width: $sm) {
+    position: absolute;
+
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+
+    border: 0;
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  &--1 {
+    transform: translate(55%, -38%);
+    @media (max-width: $lg) {
+      transform: translate(33%, 52%);
+    }
+    @media (max-width: $sm) {
+      transform: translate(20%, 60%);
+    }
+  }
+
+  &--2 {
+    transform: translate(-75%, -27%);
+    @media (max-width: $lg) {
+      transform: translate(-60%, -8%);
+    }
+    @media (max-width: $sm) {
+      transform: translate(-108%, -8%);
+    }
+  }
+
+  &--3 {
+    transform: translate(75%, -30%);
+    @media (max-width: $lg) {
+      transform: translate(30%, 20%);
+    }
+    @media (max-width: $sm) {
+      display: none;
+    }
+  }
+
+  &--4 {
+    transform: translate(20%, -30%);
+    @media (max-width: $lg) {
+      transform: translate(-28%, 22%);
+    }
+    @media (max-width: $sm) {
+      transform: translate(-30%, 25%);
+    }
+  }
+}
+
+.iti--fullscreen-popup.iti--container {
+  position: absolute;
+  width: 200px;
+}
+
+.iti__selected-country-primary {
+  padding-left: 2rem;
+}

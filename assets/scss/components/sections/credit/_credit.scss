@@ -1,0 +1,29 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.credit {
+  width: 100%;
+
+  &-container {
+    @extend %container;
+
+    &__content {
+      width: 100%;
+
+      background-color: $color-black-light;
+      border-radius: 2rem;
+
+      @include flex(space-between, center, row, 0);
+      padding: $gap-x4 $gap-x5;
+
+      @media (max-width: $lg) {
+        @include flex(center, center, column, $gap-x2);
+        padding: $gap-x4 94px;
+      }
+
+      @media (max-width: $sm) {
+        padding: $gap-x4 $gap;
+      }
+    }
+  }
+}

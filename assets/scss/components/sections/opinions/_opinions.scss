@@ -1,0 +1,61 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.opinions {
+  width: 100%;
+
+  &-container {
+    width: 100%;
+    padding: 0 $gap-x2;
+
+    @media (max-width: $lg) {
+      padding: 0 $gap-x4;
+    }
+
+    @media (max-width: $sm) {
+      padding: 0 $gap;
+    }
+
+    &__content {
+      @include flex(flex-start, center, column, $gap-x3);
+
+      @media (max-width: $lg) {
+        gap: $gap-x2;
+      }
+    }
+  }
+
+  &-title {
+    max-width: 690px;
+
+    @include title-style;
+    text-align: center;
+
+    @media (max-width: $lg) {
+      margin-bottom: $gap;
+    }
+  }
+
+  &-bread {
+    max-width: 100px;
+    margin-bottom: $gap;
+
+    @include flex(center, center, row, 0.5rem);
+    display: none;
+
+    .item {
+      height: 12px;
+      width: 12px;
+      background-color: $color-light-black-4;
+      border-radius: 50%;
+
+      &.active {
+        background-color: $color-primary;
+      }
+    }
+
+    @media (max-width: $lg) {
+      display: flex;
+    }
+  }
+}

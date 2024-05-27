@@ -1,0 +1,84 @@
+@use "../presets" as *;
+
+@mixin container($ptb: $gap, $prl: $gap) {
+  max-width: $xl;
+  margin: 0 auto;
+  padding-right: $ptb;
+  padding-left: $prl;
+}
+
+@mixin flex($jc: center, $ai: center, $direction: row, $gap: 0) {
+  display: flex;
+  align-items: $ai;
+  flex-direction: $direction;
+  justify-content: $jc;
+  gap: $gap;
+}
+
+@mixin text-custom(
+  $size: 1rem,
+  $height: auto,
+  $weight: 400,
+  $color: $color-light,
+  $pos: "start"
+) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  color: $color;
+  text-align: $pos;
+}
+
+@mixin title-style {
+  @include text-custom(3rem, 3.75rem, bold, $color-light);
+
+  @media (max-width: $sm) {
+    font-size: 1.75rem;
+    line-height: normal;
+  }
+}
+
+@mixin text-style {
+  @include text-custom(1.25rem, 1.625rem, 200, $color-light);
+
+  @media (max-width: $sm) {
+    font-size: 1rem;
+    line-height: normal;
+  }
+}
+
+@mixin radial($pos: circle at left bottom) {
+  background: rgb(80, 71, 64);
+  background: radial-gradient(
+    $pos,
+    rgba(80, 71, 64, 1) 0%,
+    rgba(92, 67, 89, 1) 16%,
+    rgba(56, 43, 63, 1) 42%,
+    rgba(23, 23, 23, 1) 100%
+  );
+}
+
+@mixin linear($pos: top) {
+  background: rgb(80, 71, 64);
+  background: linear-gradient(
+    $pos,
+    rgba($color-black, 0.01) 0%,
+    rgba($color-black, 0.69) 50%
+  );
+}
+
+@mixin block-img-height($height: 24px) {
+  height: $height;
+
+  img {
+    height: 100%;
+  }
+}
+
+@mixin block-img-width($width: 30px) {
+  width: $width;
+
+  img {
+    width: 100%;
+  }
+}

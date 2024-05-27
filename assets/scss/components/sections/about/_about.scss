@@ -1,0 +1,28 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.about {
+  width: 100%;
+  &-container {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    &__content {
+      width: 100%;
+      padding: $gap-x4 $gap-x6;
+
+      @include flex(space-between, flex-start, row, $gap);
+
+      background: url("../img/png/about/bg.png") no-repeat center center;
+      background-size: cover;
+
+      @media (max-width: $lg) {
+        @include flex(center, center, column, $gap-x2);
+      }
+
+      @media (max-width: $sm) {
+        padding: $gap-x3 $gap;
+      }
+    }
+  }
+}

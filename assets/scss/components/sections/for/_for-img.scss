@@ -1,0 +1,14 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.for-img {
+  width: calc(50% - $gap-x2 / 2);
+
+  img {
+    width: 100%;
+  }
+
+  @media (max-width: $lg) {
+    width: 100%;
+  }
+}

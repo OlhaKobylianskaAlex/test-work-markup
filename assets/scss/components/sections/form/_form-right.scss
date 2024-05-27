@@ -1,0 +1,173 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.form-right {
+  width: calc(50% - 1rem);
+
+  @media (max-width: $lg) {
+    width: 100%;
+  }
+
+  &__block {
+    width: 100%;
+    padding: $gap-x3 $gap-x5;
+
+    position: relative;
+
+    @include flex(center, center, column, $gap);
+
+    background-color: $color-light;
+    border-radius: $gap;
+
+    @media (max-width: $sm) {
+      padding: $gap-x3 $gap;
+      gap: 1rem;
+    }
+
+    .form {
+      &__title {
+        margin-right: $gap-x2;
+        @include text-custom(2rem, normal, bold, $color-black, center);
+
+        @media (max-width: $sm) {
+          margin-right: 0;
+          font-size: 1.25rem;
+        }
+      }
+
+      &__subtitle {
+        @include text-custom(1.25rem, 1.625rem, 200, $color-black, center);
+
+        @media (max-width: $sm) {
+          font-size: 0.875rem;
+        }
+      }
+
+      &__private {
+        max-width: 220px;
+
+        @include text-custom(
+          0.75rem,
+          normal,
+          200,
+          $color-light-black-5,
+          center
+        );
+
+        a {
+          color: inherit;
+          text-decoration: underline;
+        }
+      }
+
+      &__content {
+        width: 100%;
+
+        &-form {
+          width: 100%;
+
+          @include flex(space-between, center, column, 0.5rem);
+
+          .form__field {
+            width: 100%;
+
+            input {
+              width: 100%;
+              padding: 1rem 2rem;
+
+              background-color: $color-form;
+              border: 1px solid $color-form-2;
+              border-radius: 4px;
+              outline: none;
+
+              &.error {
+                border: 2px solid $color-error;
+              }
+
+              &#fieldPhone {
+                padding-left: 4.5rem;
+                position: relative;
+
+                &::before {
+                  content: "";
+                }
+              }
+
+              &::placeholder {
+                @include text-custom(0.875rem, normal, 200, $color-black);
+              }
+            }
+
+            span.error {
+              display: none;
+              color: $color-error;
+
+              &.show {
+                display: block;
+              }
+            }
+
+            .iti {
+              width: 100% !important;
+            }
+
+            &:last-of-type {
+              margin-bottom: 1.5rem;
+            }
+          }
+        }
+
+        &-limit {
+          margin-top: 0.75rem;
+          @include text-custom(
+            0.875rem,
+            auto,
+            400,
+            $color-light-black-5,
+            center
+          );
+        }
+      }
+
+      &__overlay {
+        width: 220px;
+        height: 170px;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include flex(center, center, column);
+
+        background: url("../img/svg/form/shape.svg") no-repeat center center;
+        background-size: contain;
+
+        color: $color-light;
+
+        transform: translate(20%, -20%);
+
+        @media (max-width: $sm) {
+          width: 234px;
+          height: 105px;
+          transform: translate(27%, -35%);
+        }
+
+        &-text-top,
+        &-text-bottom {
+          @include text-custom(0.75rem, normal, bold);
+
+          @media (max-width: $sm) {
+            font-size: 0.5rem;
+          }
+        }
+
+        &-text-center {
+          @include text-custom(1.875rem, normal, 700);
+
+          @media (max-width: $sm) {
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.expect-list {
+  width: 100%;
+  @include flex(flex-start, space-evently, row, $gap);
+  flex-wrap: wrap;
+
+  @media (max-width: $lg) {
+    flex-direction: column;
+  }
+
+  &__item {
+    width: calc(50% - $gap / 2);
+    padding: $gap-x2;
+
+    @include flex(flex-start, center, row, 1rem);
+
+    @include radial(circle at left bottom);
+
+    color: $color-light;
+    border-radius: 20px;
+
+    @media (max-width: $lg) {
+      width: 100%;
+      padding: $gap-x2 $gap;
+    }
+
+    .item {
+      &-img {
+        @include block-img-height(72px);
+      }
+
+      &-info {
+        @include flex(flex-start, flex-start, column, 12px);
+
+        &__title {
+          @include text-custom(1.25rem, 1.625, bold, $color-primary);
+
+          @media (max-width: $md) {
+            font-size: 1rem;
+          }
+          @media (max-width: $sm) {
+            padding-right: 35px;
+          }
+        }
+
+        &__description {
+          max-width: 324px;
+          @include text-custom(0.875rem, normal, 200, $color-light);
+
+          @media (max-width: $sm) {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

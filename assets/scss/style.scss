@@ -1,0 +1,79 @@
+@use "../../libs/normalize.css/normalize";
+
+@use "common/typography";
+@use "common/classes";
+
+@use "components/header/header";
+@use "components/header/header-logo";
+@use "components/header/header-navbar";
+@use "components/header/header-burger";
+
+@use "components/sections/main/main";
+@use "components/sections/main/main-info";
+@use "components/sections/main/main-img";
+
+@use "components/sections/for/for";
+@use "components/sections/for/for-info";
+@use "components/sections/for/for-img";
+
+@use "components/sections/advantages/advantages";
+@use "components/sections/advantages/advantages-left";
+@use "components/sections/advantages/advantages-right";
+
+@use "components/sections/areas/areas";
+@use "components/sections/areas/areas-list";
+@use "components/sections/areas/areas-footer";
+
+@use "components/sections/audience/audience";
+@use "components/sections/audience/audience-list";
+
+@use "components/sections/who/who";
+@use "components/sections/who/who-block";
+
+@use "components/sections/about/about";
+@use "components/sections/about/about-left";
+@use "components/sections/about/about-right";
+
+@use "components/sections/program/program";
+@use "components/sections/program/program-lessons";
+@use "components/sections/program/program-about";
+
+@use "components/sections/expect/expect";
+@use "components/sections/expect/expect-list";
+
+@use "components/sections/result/result";
+@use "components/sections/result/result-range";
+@use "components/sections/result/result-footer";
+
+@use "components/sections/process/process";
+@use "components/sections/process/process-list";
+
+@use "components/sections/how/how";
+@use "components/sections/how/how-list";
+@use "components/sections/how/how-footer";
+
+@use "components/sections/help/help";
+@use "components/sections/help/help-left";
+@use "components/sections/help/help-right";
+
+@use "components/sections/media/media";
+@use "components/sections/media/media-list";
+
+@use "components/sections/credit/credit";
+@use "components/sections/credit/credit-left";
+@use "components/sections/credit/credit-center";
+@use "components/sections/credit/credit-right";
+
+@use "components/sections/form/form";
+@use "components/sections/form/form-left";
+@use "components/sections/form/form-right";
+
+@use "components/sections/opinions/opinions";
+@use "components/sections/opinions/opinions-block";
+
+@use "components/sections/answers/answers";
+@use "components/sections/answers/answers-block";
+
+@use "components/footer/footer";
+@use "components/footer/footer-top";
+@use "components/footer/footer-bottom";

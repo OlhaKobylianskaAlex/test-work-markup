@@ -1,0 +1,46 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.result-range {
+  width: 100%;
+  padding: 28px $gap;
+  margin-bottom: $gap-x2;
+
+  background-color: $color-black-light-3;
+
+  @media (max-width: $sm) {
+    margin-bottom: 24px;
+  }
+
+  &__block {
+    @include flex(space-between, center);
+
+    .item-range {
+      height: 24px;
+      width: 50%;
+      background-color: $color-primary;
+      position: relative;
+
+      &--2 {
+        width: 30%;
+        background-color: $color-primary-light-2;
+      }
+
+      &--3 {
+        width: 20%;
+        background-color: $color-light;
+      }
+
+      &:not(:last-child)::after {
+        content: " ";
+        display: block;
+        position: absolute;
+        height: 44px;
+        width: 2px;
+        right: -2px;
+        top: -10px;
+        background-color: inherit;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $font-main;
+  font-size: $font-size;
+
+  overflow-y: scroll;
+
+  &.hidden {
+    overflow: hidden;
+  }
+}
+
+body {
+  background-color: $color-black;
+  overflow: hidden;
+}
+
+main {
+  @include flex(flex-start, center, column, $gap-x6);
+
+  @media (max-width: $sm) {
+    gap: $gap-x5;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $color-light;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}

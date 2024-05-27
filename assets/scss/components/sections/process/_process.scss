@@ -1,0 +1,34 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.process {
+  width: 100%;
+
+  &-container {
+    @extend %container;
+
+    &__content {
+      width: 100%;
+
+      background-color: $color-black-light;
+      border-radius: 2rem;
+
+      @include flex(space-between, center, column, $gap-x3);
+      padding: $gap-x4 $gap-x5;
+
+      @media (max-width: $lg) {
+        padding: $gap-x4 $gap-x2;
+        gap: $gap-x2;
+      }
+
+      @media (max-width: $sm) {
+        padding: $gap-x3 $gap;
+      }
+    }
+  }
+
+  &-title {
+    @include title-style;
+    text-align: center;
+  }
+}

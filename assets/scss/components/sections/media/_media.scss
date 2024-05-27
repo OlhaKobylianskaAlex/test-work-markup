@@ -1,0 +1,31 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.media {
+  position: relative;
+
+  &-container {
+    @extend %container;
+
+    &__content {
+      @include flex(space-between, center, column, 0);
+    }
+  }
+
+  &-title {
+    margin-bottom: 2rem;
+
+    @include title-style;
+    text-align: center;
+  }
+
+  &-description {
+    margin-bottom: 2rem;
+    @include text-custom(1.25rem, 1.625rem, 200, $color-light, center);
+
+    @media (max-width: $sm) {
+      max-width: 280px;
+      font-size: 1rem;
+    }
+  }
+}

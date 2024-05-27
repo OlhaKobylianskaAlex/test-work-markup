@@ -1,0 +1,36 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.answers {
+  width: 100%;
+
+  background-color: $color-black-light;
+
+  @media (max-width: $sm) {
+    background-color: $color-black;
+  }
+
+  &-container {
+    @extend %container;
+
+    &__content {
+      max-width: 604px;
+      padding: $gap-x6 0;
+      margin: 0 auto;
+
+      @include flex(flex-start, space-evently, column, $gap-x3);
+
+      @media (max-width: $sm) {
+        padding: $gap-x4 0.75rem;
+
+        background-color: $color-black-light;
+        border-radius: $gap;
+      }
+    }
+  }
+
+  &-title {
+    @include title-style;
+    text-align: center;
+  }
+}

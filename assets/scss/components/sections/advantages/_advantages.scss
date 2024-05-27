@@ -1,0 +1,32 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.advantages {
+  margin-top: $gap-x3;
+  margin-bottom: 10px;
+
+  &-container {
+    @extend %container;
+
+    &__content {
+      padding: $gap-x4 $gap-x5;
+
+      @include flex(space-between, flex-start, row, $gap);
+
+      @include radial;
+
+      border-radius: 2rem;
+
+      @media (max-width: $lg) {
+        padding: $gap-x4 $gap-x2;
+        flex-direction: column;
+        gap: $gap-x2;
+        @include radial(circle at left bottom);
+      }
+
+      @media (max-width: $sm) {
+        padding: $gap-x3 $gap;
+      }
+    }
+  }
+}

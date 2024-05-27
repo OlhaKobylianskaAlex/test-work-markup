@@ -1,0 +1,79 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.opinions-block {
+  max-width: 1270px;
+  width: 100%;
+
+  @include flex(space-between, center, row, $gap);
+
+  &__arrow {
+    @include block-img-height(24px);
+
+    &--prev {
+      transform: rotate(180deg);
+    }
+
+    @media (max-width: $lg) {
+      display: none;
+    }
+  }
+
+  &__container {
+    @media (max-width: $lg) {
+      margin-right: -80px;
+      padding-right: 80px;
+      overflow-x: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    @media (max-width: $sm) {
+      margin-right: -20px;
+      padding-right: 20px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    padding: 14.5rem 0 15.75rem;
+
+    @include flex(space-between, center, row, 15px);
+
+    @media (max-width: $lg) {
+      justify-content: flex-start;
+      padding: 0;
+      padding-right: 80px;
+    }
+
+    .item {
+      width: calc(100% / 5 - $gap-x3 / 5);
+      opacity: 0.5;
+
+      img {
+        width: 100%;
+      }
+
+      @media (max-width: $lg) {
+        min-width: 290px;
+        opacity: 1;
+      }
+
+      @media (max-width: $sm) {
+        min-width: 250px;
+      }
+
+      &.active {
+        transform: scale(1.8);
+        opacity: 1;
+        z-index: 100;
+
+        @media (max-width: $lg) {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}

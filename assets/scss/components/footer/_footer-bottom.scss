@@ -1,0 +1,36 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.footer-bottom {
+  width: 100%;
+
+  &__block {
+    width: 100%;
+    padding: $gap-x2 0;
+    @include flex(space-between, center, row, 1.5rem);
+
+    color: $color-light-black-3;
+    border-top: 1px solid $color-black-light-7;
+
+    @media (max-width: $lg) {
+      flex-direction: column;
+    }
+
+    .item {
+      &__text {
+        @include text-custom(
+          0.75rem,
+          normal,
+          200,
+          $color-light-black-3,
+          center
+        );
+      }
+
+      &:first-child .item__text {
+        color: $color-light;
+        font-weight: bold;
+      }
+    }
+  }
+}

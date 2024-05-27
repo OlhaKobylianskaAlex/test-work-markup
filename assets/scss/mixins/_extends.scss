@@ -1,0 +1,19 @@
+@use "../presets" as *;
+@use "mixins" as *;
+
+%container {
+  max-width: $xl;
+  margin: 0 auto;
+  padding-right: $gap;
+  padding-left: $gap;
+
+  @media (max-width: $lg) {
+    padding-right: 5.125rem;
+    padding-left: 5.125rem;
+  }
+
+  @media (max-width: $sm) {
+    padding-right: $gap;
+    padding-left: $gap;
+  }
+}

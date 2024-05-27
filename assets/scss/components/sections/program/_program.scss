@@ -1,0 +1,39 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.program {
+  width: 100%;
+  background-color: $color-light;
+
+  &-container {
+    @extend %container;
+
+    &__content {
+      padding: $gap-x4 0;
+      @include flex(space-between, flex-start, row, $gap);
+    }
+  }
+
+  &-title {
+    max-width: 840px;
+    margin-bottom: 2rem;
+
+    @include title-style;
+    text-align: center;
+
+    @media (max-width: $sm) {
+      font-size: 1.625rem;
+    }
+  }
+
+  &-description {
+    max-width: 700px;
+    margin-bottom: $gap-x3;
+
+    @include text-custom(1.5rem, normal, 200, $color-light, center);
+
+    @media (max-width: $sm) {
+      font-size: 1rem;
+    }
+  }
+}

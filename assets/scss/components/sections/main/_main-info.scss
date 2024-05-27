@@ -1,0 +1,125 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.main-info {
+  width: calc(50% - $gap-x2 / 2);
+  @include flex(center, flex-start, column, $gap);
+
+  @media (max-width: $lg) {
+    width: 100%;
+  }
+
+  &__icons {
+    padding: 0;
+    margin: 0;
+    @include flex(flex-start, center, row, 1.5rem);
+
+    @media (max-width: $sm) {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .icons {
+      &__item {
+        @include block-img-height(30px);
+
+        @include flex(center, center, row, 0.5rem);
+
+        @media (max-width: $xs) {
+          gap: 4px;
+        }
+      }
+
+      &__text {
+        @include text-custom(0.875rem, normal, 200, $color-light);
+      }
+    }
+  }
+
+  &__accent {
+    .accent {
+      &__item {
+        margin-top: $gap-x2;
+        @include flex(flex-start, flex-start, row, $gap-x2);
+
+        @media (max-width: $sm) {
+          gap: $gap;
+        }
+
+        h1 {
+          margin: 0;
+
+          @include text-custom(10.625rem, 9rem, bold, $color-primary);
+          text-transform: uppercase;
+
+          @media (max-width: $sm) {
+            font-size: 6rem;
+            line-height: 6rem;
+          }
+        }
+
+        &-text {
+          padding-top: $gap-sm;
+          color: $color-light;
+          font-weight: 200;
+
+          @media (max-width: $sm) {
+            @include text-custom(0.875rem, normal, 200, $color-light);
+          }
+        }
+      }
+
+      &__text {
+        @include text-custom(2.75rem, normal, bold);
+        text-transform: uppercase;
+
+        @media (max-width: $sm) {
+          font-size: 2.25rem;
+        }
+      }
+
+      &__rating {
+        @include block-img-height(24px);
+
+        margin-top: 20px;
+        @include flex(flex-start, center, row, $gap);
+
+        &-text {
+          @include text-custom(1.125rem, normal, 200, $color-light);
+
+          @media (max-width: $sm) {
+            font-size: 0.875rem;
+            padding-right: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  &__description {
+    padding: $gap-x2 $gap-x3 $gap-x2 0;
+
+    @include text-custom(1.625rem, normal, 200);
+
+    @media (max-width: $sm) {
+      font-size: 1rem;
+      padding: $gap $gap-x3 $gap 0;
+    }
+
+    .accent {
+      font-weight: bold;
+    }
+  }
+
+  &__btn {
+    @include flex(center, center, column, 0.75rem);
+
+    @media (max-width: $sm) {
+      align-self: center;
+    }
+
+    .btn-text {
+      @include text-custom(1rem, normal, 200);
+    }
+  }
+}

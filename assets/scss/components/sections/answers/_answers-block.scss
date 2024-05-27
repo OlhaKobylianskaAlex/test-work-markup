@@ -1,0 +1,59 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.answers-block {
+  @include flex(flex-start, flex-start, column, 0.5rem);
+
+  .item {
+    width: 100%;
+
+    &__top {
+      min-height: 92px;
+      padding: $gap 2rem;
+
+      @include flex(flex-start, center, row, $gap);
+
+      background-color: $color-black-light-8;
+      border-radius: $gap-sm;
+
+      cursor: pointer;
+
+      @media (max-width: $sm) {
+        padding: 1rem;
+      }
+    }
+
+    &__icon {
+      @include block-img-height(24px);
+    }
+
+    &__text {
+      @include text-custom(1.25rem, 1.625rem, bold);
+
+      @media (max-width: $sm) {
+        font-size: 1rem;
+      }
+    }
+
+    &__area {
+      padding: 2rem;
+      margin-top: -5px;
+
+      display: none;
+
+      background-color: $color-black-light-3;
+
+      @include text-custom(0.875rem, normal, 200, $color-light-black-3);
+
+      &.active {
+        display: block;
+      }
+    }
+
+    &.active {
+      .item__top {
+        background-color: $color-black-light-4;
+      }
+    }
+  }
+}

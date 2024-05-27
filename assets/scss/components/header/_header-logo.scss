@@ -1,0 +1,11 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header-logo {
+  height: 100%;
+
+  &__link {
+    display: block;
+    @include block-img-height(100%);
+  }
+}

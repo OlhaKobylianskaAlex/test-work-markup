@@ -1,0 +1,20 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.footer {
+  width: 100%;
+
+  &-container {
+    @extend %container;
+
+    &__content {
+      width: 100%;
+      padding-top: $gap-x6;
+      @include flex(space-between, center, column, $gap-x4);
+
+      @media (max-width: $sm) {
+        padding-top: $gap-x5;
+      }
+    }
+  }
+}

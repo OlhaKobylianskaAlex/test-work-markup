@@ -1,0 +1,19 @@
+@use "sass:math";
+
+$font-main: "Mulish", sans-serif;
+$font-size: 16px;
+
+$xl: 1270px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+$xs: 360px;
+$gap: 20px;
+
+$gap-sm: math.div($gap, 2);
+$gap-lg: $gap * 1.5;
+$gap-x2: $gap * 2;
+$gap-x3: $gap * 3;
+$gap-x4: $gap * 4;
+$gap-x5: $gap * 5;
+$gap-x6: $gap * 6;

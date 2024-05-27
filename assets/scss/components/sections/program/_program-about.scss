@@ -1,0 +1,106 @@
+@use "../../../presets" as *;
+@use "../../../mixins/" as *;
+
+.program-about {
+  width: calc(100% - 500px - $gap);
+
+  @media (max-width: $lg) {
+    display: none;
+  }
+
+  &__block {
+    height: 840px;
+    padding: 2rem;
+
+    @include flex(flex-start, flex-start, column, 2rem);
+    border: 1px solid $color-light-black;
+
+    @media (max-width: $sm) {
+      padding: $gap;
+    }
+
+    .block {
+      &__title {
+        @include text-custom(1.5rem, normal, bold, $color-black);
+
+        @media (max-width: $sm) {
+          display: none;
+        }
+      }
+
+      &__items {
+        width: 100%;
+        margin: 0;
+        padding: 0 0 0 $gap;
+
+        @include flex(flex-start, center, row, $gap);
+        flex-wrap: wrap;
+
+        @media (max-width: $sm) {
+          @include flex(flex-start, flex-start, column, $gap);
+        }
+
+        li {
+          width: calc(50% - $gap / 2);
+          font-size: 1.125rem;
+          list-style: square;
+
+          &:nth-of-type(even) {
+            padding-left: $gap;
+          }
+
+          &::marker {
+            color: $color-primary;
+          }
+
+          @media (max-width: $sm) {
+            width: 100%;
+            font-size: 0.875rem;
+
+            &:nth-of-type(even) {
+              padding-left: 0;
+            }
+          }
+        }
+      }
+
+      &__result {
+        width: 100%;
+        padding: $gap $gap-x3;
+
+        @include flex(flex-start, flex-start, column, $gap);
+
+        background-color: $color-light-black-2;
+
+        @include text-custom(0.875rem, normal, 200, $color-black);
+
+        &-subtitle {
+          @include text-custom(1rem, normal, bold, $color-black);
+        }
+
+        &-text {
+          color: $color-black;
+
+          @media (max-width: $sm) {
+            font-size: 0.75rem;
+          }
+        }
+
+        @media (max-width: $lg) {
+          padding: $gap;
+        }
+      }
+
+      &__btn {
+        .btn {
+          @media (max-width: $sm) {
+            width: 100% !important;
+          }
+        }
+        @media (max-width: $sm) {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}

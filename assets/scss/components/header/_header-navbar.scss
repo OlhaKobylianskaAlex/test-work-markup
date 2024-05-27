@@ -1,0 +1,16 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header-navbar {
+  @media (max-width: $md) {
+    display: none;
+  }
+
+  &__list {
+    @include flex(center, center, row, $gap-x2);
+  }
+
+  &__item {
+    @include text-custom(0.875rem, normal, 200, $color-light);
+  }
+}
