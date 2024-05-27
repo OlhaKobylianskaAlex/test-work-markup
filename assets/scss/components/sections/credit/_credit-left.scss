@@ -3,6 +3,7 @@
 
 .credit-left {
   width: 40%;
+
   @include flex(flex-start, flex-start, column, $gap-x2);
 
   @media (max-width: $lg) {
@@ -11,6 +12,7 @@
 
   &__title {
     width: 100%;
+
     @include title-style;
 
     @media (max-width: $lg) {
@@ -28,6 +30,7 @@
     @media (max-width: $sm) {
       max-width: 240px;
       margin: 0 auto;
+
       line-height: 1.625rem;
     }
   }

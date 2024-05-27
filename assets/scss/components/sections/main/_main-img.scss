@@ -2,8 +2,9 @@
 @use "../../../mixins/" as *;
 
 .main-img {
-  width: calc(50% - $gap-x2 / 2);
   position: relative;
+
+  width: calc(50% - $gap-x2 / 2);
 
   @media (max-width: $lg) {
     width: 100%;
@@ -11,23 +12,22 @@
 
   &__bg {
     @include block-img-width(100%);
-
     @include flex;
   }
 
   &__top {
-    width: 165px;
-    height: 360px;
-    padding: 3.75rem 2rem;
-
     position: absolute;
     top: 0;
     right: 0;
 
-    @include flex(center, center, column, 28px);
+    width: 165px;
+    height: 360px;
+    padding: 3.75rem 2rem;
 
-    background-color: $color-primary;
     border-radius: 20px;
+    background-color: $color-primary;
+
+    @include flex(center, center, column, 28px);
 
     @media (max-width: $sm) {
       width: 88px;

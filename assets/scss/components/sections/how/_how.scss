@@ -16,8 +16,9 @@
     max-width: 840px;
     margin-bottom: 2rem;
 
-    @include title-style;
     text-align: center;
+
+    @include title-style;
 
     @media (max-width: $lg) {
       max-width: 550px;

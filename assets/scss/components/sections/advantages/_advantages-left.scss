@@ -2,9 +2,10 @@
 @use "../../../mixins/" as *;
 
 .advantages-left {
-  @include flex(flex-start, flex-start, column, $gap-x2);
   width: 55%;
   max-width: 500px;
+
+  @include flex(flex-start, flex-start, column, $gap-x2);
 
   @media (max-width: $lg) {
     width: 100%;

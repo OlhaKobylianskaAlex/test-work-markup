@@ -3,6 +3,7 @@
 
 .main-info {
   width: calc(50% - $gap-x2 / 2);
+
   @include flex(center, flex-start, column, $gap);
 
   @media (max-width: $lg) {
@@ -10,19 +11,20 @@
   }
 
   &__icons {
-    padding: 0;
     margin: 0;
+    padding: 0;
+
     @include flex(flex-start, center, row, 1.5rem);
 
     @media (max-width: $sm) {
-      width: 100%;
       justify-content: space-between;
+
+      width: 100%;
     }
 
     .icons {
       &__item {
         @include block-img-height(30px);
-
         @include flex(center, center, row, 0.5rem);
 
         @media (max-width: $xs) {
@@ -40,6 +42,7 @@
     .accent {
       &__item {
         margin-top: $gap-x2;
+
         @include flex(flex-start, flex-start, row, $gap-x2);
 
         @media (max-width: $sm) {
@@ -49,8 +52,9 @@
         h1 {
           margin: 0;
 
-          @include text-custom(10.625rem, 9rem, bold, $color-primary);
           text-transform: uppercase;
+
+          @include text-custom(10.625rem, 9rem, bold, $color-primary);
 
           @media (max-width: $sm) {
             font-size: 6rem;
@@ -60,7 +64,9 @@
 
         &-text {
           padding-top: $gap-sm;
+
           color: $color-light;
+
           font-weight: 200;
 
           @media (max-width: $sm) {
@@ -70,8 +76,9 @@
       }
 
       &__text {
-        @include text-custom(2.75rem, normal, bold);
         text-transform: uppercase;
+
+        @include text-custom(2.75rem, normal, bold);
 
         @media (max-width: $sm) {
           font-size: 2.25rem;
@@ -79,17 +86,18 @@
       }
 
       &__rating {
-        @include block-img-height(24px);
-
         margin-top: 20px;
+
+        @include block-img-height(24px);
         @include flex(flex-start, center, row, $gap);
 
         &-text {
           @include text-custom(1.125rem, normal, 200, $color-light);
 
           @media (max-width: $sm) {
-            font-size: 0.875rem;
             padding-right: 30px;
+
+            font-size: 0.875rem;
           }
         }
       }
@@ -102,8 +110,9 @@
     @include text-custom(1.625rem, normal, 200);
 
     @media (max-width: $sm) {
-      font-size: 1rem;
       padding: $gap $gap-x3 $gap 0;
+
+      font-size: 1rem;
     }
 
     .accent {

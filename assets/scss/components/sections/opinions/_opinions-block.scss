@@ -2,8 +2,8 @@
 @use "../../../mixins/" as *;
 
 .opinions-block {
-  max-width: 1270px;
   width: 100%;
+  max-width: 1270px;
 
   @include flex(space-between, center, row, $gap);
 
@@ -21,9 +21,10 @@
 
   &__container {
     @media (max-width: $lg) {
+      overflow-x: auto;
+
       margin-right: -80px;
       padding-right: 80px;
-      overflow-x: auto;
 
       &::-webkit-scrollbar {
         display: none;
@@ -44,12 +45,14 @@
 
     @media (max-width: $lg) {
       justify-content: flex-start;
+
       padding: 0;
       padding-right: 80px;
     }
 
     .item {
       width: calc(100% / 5 - $gap-x3 / 5);
+
       opacity: 0.5;
 
       img {
@@ -58,6 +61,7 @@
 
       @media (max-width: $lg) {
         min-width: 290px;
+
         opacity: 1;
       }
 
@@ -66,9 +70,11 @@
       }
 
       &.active {
-        transform: scale(1.8);
-        opacity: 1;
         z-index: 100;
+
+        transform: scale(1.8);
+
+        opacity: 1;
 
         @media (max-width: $lg) {
           transform: scale(1);

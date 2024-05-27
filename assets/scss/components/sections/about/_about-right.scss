@@ -2,16 +2,18 @@
 @use "../../../mixins/" as *;
 
 .about-right {
-  @include flex(flex-start, flex-start, column, $gap);
-
   color: $color-light;
+
+  @include flex(flex-start, flex-start, column, $gap);
 
   &__text {
     max-width: 376px;
+
     @include text-style;
 
     @media (max-width: $lg) {
       width: 100%;
+
       text-align: center;
     }
   }
@@ -20,8 +22,9 @@
     @include flex(flex-start, center, row, 44px);
 
     @media (max-width: $lg) {
-      width: 100%;
       justify-content: center;
+
+      width: 100%;
     }
 
     @media (max-width: $sm) {
@@ -32,19 +35,20 @@
       @include flex(flex-start, center, column, 4px);
 
       &__icon {
-        @include flex(center, center);
-
-        height: 64px;
         width: 64px;
+        height: 64px;
+
         border-radius: 50%;
         background-color: $color-primary;
 
+        @include flex(center, center);
         @include text-custom(2rem, 36px);
       }
 
       &__text {
-        @include text-custom(1.25rem, 1.625rem, 200);
         text-transform: uppercase;
+
+        @include text-custom(1.25rem, 1.625rem, 200);
       }
     }
   }

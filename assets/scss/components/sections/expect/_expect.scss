@@ -2,8 +2,9 @@
 @use "../../../mixins/" as *;
 
 .expect {
-  width: 100%;
   position: relative;
+
+  width: 100%;
 
   &-container {
     @extend %container;
@@ -17,8 +18,9 @@
     max-width: 840px;
     margin-bottom: 2rem;
 
-    @include title-style;
     text-align: center;
+
+    @include title-style;
 
     @media (max-width: $md) {
       max-width: 390px;
@@ -26,6 +28,7 @@
 
     @media (max-width: $sm) {
       max-width: 195px;
+
       font-size: 1.625rem;
     }
   }

@@ -3,6 +3,7 @@
 
 .program {
   width: 100%;
+
   background-color: $color-light;
 
   &-container {
@@ -10,6 +11,7 @@
 
     &__content {
       padding: $gap-x4 0;
+
       @include flex(space-between, flex-start, row, $gap);
     }
   }
@@ -18,8 +20,9 @@
     max-width: 840px;
     margin-bottom: 2rem;
 
-    @include title-style;
     text-align: center;
+
+    @include title-style;
 
     @media (max-width: $sm) {
       font-size: 1.625rem;

@@ -6,18 +6,18 @@
   height: 154px;
   margin-top: 80px;
 
-  @include flex(space-between, center);
-
   background: url("../img/png/hwo/bg.png") no-repeat center center;
   background-size: contain;
+
+  @include flex(space-between, center);
 
   @media (max-width: $lg) {
     transform: rotate(90deg);
   }
 
   &__text {
-    margin: 0 auto;
     max-width: 1030px;
+    margin: 0 auto;
 
     @include text-custom(1.5rem, normal, 200, $color-light, center);
 

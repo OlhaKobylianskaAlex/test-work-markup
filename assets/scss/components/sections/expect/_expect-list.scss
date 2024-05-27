@@ -2,9 +2,11 @@
 @use "../../../mixins/" as *;
 
 .expect-list {
-  width: 100%;
-  @include flex(flex-start, space-evently, row, $gap);
   flex-wrap: wrap;
+
+  width: 100%;
+
+  @include flex(flex-start, space-evently, row, $gap);
 
   @media (max-width: $lg) {
     flex-direction: column;
@@ -14,12 +16,11 @@
     width: calc(50% - $gap / 2);
     padding: $gap-x2;
 
-    @include flex(flex-start, center, row, 1rem);
-
-    @include radial(circle at left bottom);
-
     color: $color-light;
     border-radius: 20px;
+
+    @include flex(flex-start, center, row, 1rem);
+    @include radial(circle at left bottom);
 
     @media (max-width: $lg) {
       width: 100%;
@@ -47,6 +48,7 @@
 
         &__description {
           max-width: 324px;
+
           @include text-custom(0.875rem, normal, 200, $color-light);
 
           @media (max-width: $sm) {

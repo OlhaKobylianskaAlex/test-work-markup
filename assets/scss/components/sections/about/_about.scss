@@ -11,10 +11,10 @@
       width: 100%;
       padding: $gap-x4 $gap-x6;
 
-      @include flex(space-between, flex-start, row, $gap);
-
       background: url("../img/png/about/bg.png") no-repeat center center;
       background-size: cover;
+
+      @include flex(space-between, flex-start, row, $gap);
 
       @media (max-width: $lg) {
         @include flex(center, center, column, $gap-x2);

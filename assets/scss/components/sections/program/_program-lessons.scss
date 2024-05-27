@@ -9,11 +9,13 @@
   }
 
   &__block {
+    overflow-y: auto;
+
     height: 840px;
-    @include flex(flex-start, flex-start, column, 0);
 
     border: 1px solid $color-light-black;
-    overflow-y: auto;
+
+    @include flex(flex-start, flex-start, column, 0);
 
     @media (max-width: $lg) {
       height: 1120px;
@@ -27,18 +29,18 @@
   &__item {
     width: 100%;
     padding: 2rem 1rem;
+
     @include flex(flex-start, center, row, 1rem);
 
     .item {
       &__icon {
-        height: 24px;
         min-width: 24px;
+        height: 24px;
+
+        border-radius: 50%;
+        background-color: $color-primary;
 
         @include flex(center, center);
-
-        background-color: $color-primary;
-        border-radius: 50%;
-
         @include text-custom(0.75rem, normal, bold);
       }
 
@@ -49,6 +51,7 @@
 
     &.active {
       background-color: $color-primary-light;
+
       font-weight: bold;
     }
   }
@@ -63,6 +66,6 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #b4b4b4;
   border-radius: 6px;
+  background-color: #b4b4b4;
 }

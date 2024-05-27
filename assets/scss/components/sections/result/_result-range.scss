@@ -3,8 +3,8 @@
 
 .result-range {
   width: 100%;
-  padding: 28px $gap;
   margin-bottom: $gap-x2;
+  padding: 28px $gap;
 
   background-color: $color-black-light-3;
 
@@ -16,29 +16,37 @@
     @include flex(space-between, center);
 
     .item-range {
-      height: 24px;
-      width: 50%;
-      background-color: $color-primary;
       position: relative;
+
+      width: 50%;
+      height: 24px;
+
+      background-color: $color-primary;
 
       &--2 {
         width: 30%;
+
         background-color: $color-primary-light-2;
       }
 
       &--3 {
         width: 20%;
+
         background-color: $color-light;
       }
 
       &:not(:last-child)::after {
-        content: " ";
-        display: block;
         position: absolute;
-        height: 44px;
-        width: 2px;
-        right: -2px;
         top: -10px;
+        right: -2px;
+
+        display: block;
+
+        width: 2px;
+        height: 44px;
+
+        content: " ";
+
         background-color: inherit;
       }
     }

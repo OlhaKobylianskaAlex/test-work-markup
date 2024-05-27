@@ -11,12 +11,12 @@
       min-height: 92px;
       padding: $gap 2rem;
 
-      @include flex(flex-start, center, row, $gap);
-
-      background-color: $color-black-light-8;
-      border-radius: $gap-sm;
-
       cursor: pointer;
+
+      border-radius: $gap-sm;
+      background-color: $color-black-light-8;
+
+      @include flex(flex-start, center, row, $gap);
 
       @media (max-width: $sm) {
         padding: 1rem;
@@ -36,10 +36,10 @@
     }
 
     &__area {
-      padding: 2rem;
-      margin-top: -5px;
-
       display: none;
+
+      margin-top: -5px;
+      padding: 2rem;
 
       background-color: $color-black-light-3;
 

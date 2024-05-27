@@ -29,6 +29,7 @@
 
     &-item {
       max-width: 558px;
+
       @include text-style;
 
       @media (max-width: $sm) {

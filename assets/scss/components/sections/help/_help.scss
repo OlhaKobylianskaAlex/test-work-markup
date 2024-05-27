@@ -11,20 +11,23 @@
       width: 100%;
       padding: $gap-x4 $gap-x5;
 
+      border-radius: 2rem;
+      background-color: $color-black-light;
+
       @include flex(space-between, center, row, $gap-x4);
 
-      background-color: $color-black-light;
-      border-radius: 2rem;
-
       @media (max-width: $lg) {
-        padding: $gap-x4 28px;
         flex-direction: column;
+
+        padding: $gap-x4 28px;
       }
 
       @media (max-width: $sm) {
         padding: $gap-x3 0;
-        gap: $gap-x2;
+
         background-color: inherit;
+
+        gap: $gap-x2;
       }
     }
   }

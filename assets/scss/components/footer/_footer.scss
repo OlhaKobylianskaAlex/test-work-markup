@@ -10,6 +10,7 @@
     &__content {
       width: 100%;
       padding-top: $gap-x6;
+
       @include flex(space-between, center, column, $gap-x4);
 
       @media (max-width: $sm) {

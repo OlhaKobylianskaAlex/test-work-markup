@@ -11,15 +11,16 @@
     &__content {
       padding: $gap-x4 $gap-x5;
 
-      @include flex(space-between, flex-start, row, $gap);
-
-      @include radial;
-
       border-radius: 2rem;
 
+      @include flex(space-between, flex-start, row, $gap);
+      @include radial;
+
       @media (max-width: $lg) {
-        padding: $gap-x4 $gap-x2;
         flex-direction: column;
+
+        padding: $gap-x4 $gap-x2;
+
         gap: $gap-x2;
         @include radial(circle at left bottom);
       }

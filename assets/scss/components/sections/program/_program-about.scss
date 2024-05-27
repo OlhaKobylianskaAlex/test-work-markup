@@ -12,8 +12,9 @@
     height: 840px;
     padding: 2rem;
 
-    @include flex(flex-start, flex-start, column, 2rem);
     border: 1px solid $color-light-black;
+
+    @include flex(flex-start, flex-start, column, 2rem);
 
     @media (max-width: $sm) {
       padding: $gap;
@@ -29,12 +30,13 @@
       }
 
       &__items {
+        flex-wrap: wrap;
+
         width: 100%;
         margin: 0;
         padding: 0 0 0 $gap;
 
         @include flex(flex-start, center, row, $gap);
-        flex-wrap: wrap;
 
         @media (max-width: $sm) {
           @include flex(flex-start, flex-start, column, $gap);
@@ -42,8 +44,10 @@
 
         li {
           width: calc(50% - $gap / 2);
-          font-size: 1.125rem;
+
           list-style: square;
+
+          font-size: 1.125rem;
 
           &:nth-of-type(even) {
             padding-left: $gap;
@@ -55,6 +59,7 @@
 
           @media (max-width: $sm) {
             width: 100%;
+
             font-size: 0.875rem;
 
             &:nth-of-type(even) {
@@ -68,10 +73,9 @@
         width: 100%;
         padding: $gap $gap-x3;
 
-        @include flex(flex-start, flex-start, column, $gap);
-
         background-color: $color-light-black-2;
 
+        @include flex(flex-start, flex-start, column, $gap);
         @include text-custom(0.875rem, normal, 200, $color-black);
 
         &-subtitle {

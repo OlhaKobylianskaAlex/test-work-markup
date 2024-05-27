@@ -2,9 +2,11 @@
 @use "../../../mixins/" as *;
 
 .areas-list {
-  width: 100%;
-  @include flex(flex-start, space-evently, row, $gap);
   flex-wrap: wrap;
+
+  width: 100%;
+
+  @include flex(flex-start, space-evently, row, $gap);
 
   @media (max-width: $lg) {
     flex-direction: column;
@@ -14,12 +16,11 @@
     width: calc(50% - $gap / 2);
     padding: $gap-x2;
 
-    @include flex(flex-start, flex-start, row, 2rem);
-
-    @include radial(circle at right bottom);
-
     color: $color-light;
     border-radius: 20px;
+
+    @include flex(flex-start, flex-start, row, 2rem);
+    @include radial(circle at right bottom);
 
     @media (max-width: $lg) {
       width: 100%;

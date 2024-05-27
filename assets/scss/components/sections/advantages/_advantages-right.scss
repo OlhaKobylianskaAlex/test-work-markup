@@ -2,13 +2,13 @@
 @use "../../../mixins/" as *;
 
 .advantages-right {
-  @include flex(flex-start, flex-start, column, 2rem);
   width: calc(45% - $gap-x2);
   max-width: 396px;
 
-  @include flex(center, stretch, column, $gap);
-
   color: $color-light;
+
+  @include flex(flex-start, flex-start, column, 2rem);
+  @include flex(center, stretch, column, $gap);
 
   @media (max-width: $lg) {
     width: 100%;

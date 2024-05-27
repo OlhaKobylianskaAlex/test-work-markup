@@ -2,8 +2,9 @@
 @use "../../../mixins/" as *;
 
 .result {
-  width: 100%;
   position: relative;
+
+  width: 100%;
 
   &-container {
     @extend %container;
@@ -15,11 +16,14 @@
 
   &-title {
     margin-bottom: 2rem;
-    @include title-style;
+
     text-align: center;
+
+    @include title-style;
 
     @media (max-width: $sm) {
       margin-bottom: 24px;
+
       font-size: 1.625rem;
     }
   }
@@ -32,6 +36,7 @@
 
     @media (max-width: $sm) {
       margin-bottom: 24px;
+
       font-size: 1rem;
     }
   }

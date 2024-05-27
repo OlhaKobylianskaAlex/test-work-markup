@@ -7,15 +7,18 @@
 
   &__block {
     position: relative;
+
     @include flex(flex-start, flex-start, row, $gap);
 
     @media (max-width: $lg) {
       flex-direction: column;
+
       gap: $gap-x2;
     }
 
     .item {
       width: calc(100% / 4 - $gap-x3 / 4);
+
       @include flex(center, center, column, $gap);
 
       @media (max-width: $lg) {
@@ -23,39 +26,40 @@
       }
 
       @media (max-width: $lg) {
-        width: 100%;
         flex-direction: row;
+
+        width: 100%;
       }
 
       &__icon {
-        @include block-img-height(120px);
-
         position: relative;
+
+        @include block-img-height(120px);
 
         @media (max-width: $sm) {
           height: 48px;
         }
 
         .label {
-          height: 36px;
-          width: 36px;
-
-          @include flex(center, center);
-
           position: absolute;
           right: 0;
           bottom: 0;
 
-          background-color: $color-black-light-4;
-          border-radius: 50%;
+          width: 36px;
+          height: 36px;
 
           color: $color-light;
-          @include text-style;
+          border-radius: 50%;
+          background-color: $color-black-light-4;
+
           font-weight: bold;
 
+          @include flex(center, center);
+          @include text-style;
+
           @media (max-width: $sm) {
-            height: 13px;
             width: 13px;
+            height: 13px;
 
             font-size: 6px;
           }
@@ -75,8 +79,9 @@
       }
 
       &__title {
-        @include text-style;
         font-weight: bold;
+
+        @include text-style;
 
         @media (max-width: $sm) {
           width: 300px;
@@ -97,35 +102,37 @@
     }
 
     .line {
-      height: 2px;
-      width: 76%;
-
       position: absolute;
+      z-index: 100;
       top: 60px;
-      left: 12%;
       right: 12%;
+      left: 12%;
+
+      width: 76%;
+      height: 2px;
 
       background-color: $color-primary;
 
-      z-index: 100;
-
       @media (max-width: $lg) {
-        width: 2px;
-        height: calc(100% - 22%);
         top: 8%;
         left: 64px;
+
+        width: 2px;
+        height: calc(100% - 22%);
       }
 
       @media (max-width: $sm) {
-        width: 2px;
-        height: calc(100% - 22%);
         top: 4%;
         left: 24px;
+
+        width: 2px;
+        height: calc(100% - 22%);
       }
 
       @media (max-width: $xs) {
-        height: calc(100% - 25%);
         top: 3%;
+
+        height: calc(100% - 25%);
       }
     }
   }

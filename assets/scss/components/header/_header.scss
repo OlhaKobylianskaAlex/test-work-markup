@@ -2,14 +2,16 @@
 @use "../../mixins" as *;
 
 .header {
-  margin-top: 20px;
   z-index: 100;
+
+  margin-top: 20px;
 
   &-container {
     @extend %container;
 
     &__content {
       height: 42px;
+
       @include flex(space-between, center, row, $gap);
     }
   }

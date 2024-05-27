@@ -9,16 +9,17 @@
 
     &__content {
       width: 100%;
-
-      background-color: $color-black-light;
-      border-radius: 2rem;
-
-      @include flex(space-between, center, row, 0);
       padding: $gap-x4 $gap-x5;
 
+      border-radius: 2rem;
+      background-color: $color-black-light;
+
+      @include flex(space-between, center, row, 0);
+
       @media (max-width: $lg) {
-        @include flex(center, center, column, $gap-x2);
         padding: $gap-x4 94px;
+
+        @include flex(center, center, column, $gap-x2);
       }
 
       @media (max-width: $sm) {

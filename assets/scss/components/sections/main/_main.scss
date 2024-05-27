@@ -2,9 +2,9 @@
 @use "../../../mixins/" as *;
 
 .main {
-  margin-top: $gap-x3;
-
   position: relative;
+
+  margin-top: $gap-x3;
 
   &-container {
     @extend %container;

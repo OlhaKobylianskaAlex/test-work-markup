@@ -12,6 +12,7 @@
   align-items: $ai;
   flex-direction: $direction;
   justify-content: $jc;
+
   gap: $gap;
 }
 
@@ -22,11 +23,13 @@
   $color: $color-light,
   $pos: "start"
 ) {
+  text-align: $pos;
+
+  color: $color;
+
   font-size: $size;
   font-weight: $weight;
   line-height: $height;
-  color: $color;
-  text-align: $pos;
 }
 
 @mixin title-style {
@@ -50,20 +53,20 @@
 @mixin radial($pos: circle at left bottom) {
   background: rgb(80, 71, 64);
   background: radial-gradient(
-    $pos,
-    rgba(80, 71, 64, 1) 0%,
-    rgba(92, 67, 89, 1) 16%,
-    rgba(56, 43, 63, 1) 42%,
-    rgba(23, 23, 23, 1) 100%
+  $pos,
+  rgba(80, 71, 64, 1) 0%,
+  rgba(92, 67, 89, 1) 16%,
+  rgba(56, 43, 63, 1) 42%,
+  rgba(23, 23, 23, 1) 100%
   );
 }
 
 @mixin linear($pos: top) {
   background: rgb(80, 71, 64);
   background: linear-gradient(
-    $pos,
-    rgba($color-black, 0.01) 0%,
-    rgba($color-black, 0.69) 50%
+  $pos,
+  rgba($color-black, 0.01) 0%,
+  rgba($color-black, 0.69) 50%
   );
 }
 

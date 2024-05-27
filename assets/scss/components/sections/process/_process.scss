@@ -9,15 +9,16 @@
 
     &__content {
       width: 100%;
+      padding: $gap-x4 $gap-x5;
 
-      background-color: $color-black-light;
       border-radius: 2rem;
+      background-color: $color-black-light;
 
       @include flex(space-between, center, column, $gap-x3);
-      padding: $gap-x4 $gap-x5;
 
       @media (max-width: $lg) {
         padding: $gap-x4 $gap-x2;
+
         gap: $gap-x2;
       }
 
@@ -28,7 +29,8 @@
   }
 
   &-title {
-    @include title-style;
     text-align: center;
+
+    @include title-style;
   }
 }

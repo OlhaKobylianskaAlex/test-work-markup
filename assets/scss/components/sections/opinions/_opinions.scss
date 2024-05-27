@@ -28,8 +28,9 @@
   &-title {
     max-width: 690px;
 
-    @include title-style;
     text-align: center;
+
+    @include title-style;
 
     @media (max-width: $lg) {
       margin-bottom: $gap;
@@ -37,17 +38,19 @@
   }
 
   &-bread {
+    display: none;
+
     max-width: 100px;
     margin-bottom: $gap;
 
     @include flex(center, center, row, 0.5rem);
-    display: none;
 
     .item {
-      height: 12px;
       width: 12px;
-      background-color: $color-light-black-4;
+      height: 12px;
+
       border-radius: 50%;
+      background-color: $color-light-black-4;
 
       &.active {
         background-color: $color-primary;

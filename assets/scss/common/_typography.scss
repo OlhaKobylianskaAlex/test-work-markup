@@ -8,10 +8,10 @@
 }
 
 html {
+  overflow-y: scroll;
+
   font-family: $font-main;
   font-size: $font-size;
-
-  overflow-y: scroll;
 
   &.hidden {
     overflow: hidden;
@@ -19,8 +19,9 @@ html {
 }
 
 body {
-  background-color: $color-black;
   overflow: hidden;
+
+  background-color: $color-black;
 }
 
 main {
@@ -33,6 +34,7 @@ main {
 
 a {
   text-decoration: none;
+
   color: $color-light;
 }
 
@@ -46,6 +48,6 @@ h3,
 h4,
 h5,
 h6 {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }

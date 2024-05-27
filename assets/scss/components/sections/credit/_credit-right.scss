@@ -3,27 +3,30 @@
 
 .credit-right {
   width: 30%;
+
   @include flex(flex-start, flex-start, column, 1rem);
 
   @media (max-width: $lg) {
-    max-width: 320px;
     width: 100%;
+    max-width: 320px;
   }
 
   &__title {
-    @include text-style;
     font-weight: bold;
+
+    @include text-style;
   }
 
   &__list {
     margin: 0;
     padding: 0 0 0 $gap;
+
     @include flex(flex-start, flex-start, column, 0.75rem);
 
     li {
-      @include text-custom(0.875rem, 1.625rem, 200, $color-light);
-
       list-style: disc;
+
+      @include text-custom(0.875rem, 1.625rem, 200, $color-light);
 
       img {
         margin-left: -$gap;

@@ -3,6 +3,7 @@
 
 .help-right {
   width: calc(40% - $gap-x4 / 2);
+
   @include flex(center, center);
 
   @media (max-width: $lg) {

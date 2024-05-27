@@ -3,9 +3,10 @@
 
 .footer-top {
   width: 100%;
-  @include flex(space-between, center, row, 2rem);
 
   color: $color-light;
+
+  @include flex(space-between, center, row, 2rem);
 
   @media (max-width: $lg) {
     flex-direction: column;
@@ -14,11 +15,13 @@
 
   &-left {
     width: 35%;
+
     @include flex(space-between, flex-start, column, 2rem);
 
     @media (max-width: $lg) {
-      width: 100%;
       align-items: center;
+
+      width: 100%;
     }
 
     &__logo {
@@ -44,11 +47,13 @@
 
   &-center {
     width: 35%;
+
     @include flex(space-between, flex-start, column, $gap);
 
     @media (max-width: $lg) {
-      width: 50%;
       align-items: center;
+
+      width: 50%;
     }
 
     @media (max-width: $md) {
@@ -61,12 +66,14 @@
 
     &__list {
       width: 100%;
+
       @include flex(flex-start, flex-start, row, 0);
 
       .list {
-        padding: 0;
-        margin: 0;
         width: 50%;
+        margin: 0;
+        padding: 0;
+
         @include flex(flex-start, flex-start, column, 0.75rem);
 
         @media (max-width: $lg) {
@@ -82,17 +89,20 @@
 
   &-right {
     width: calc(30% - $gap-x2);
-    @include flex(flex-end, flex-end, column, $gap);
 
     color: $color-light;
 
+    @include flex(flex-end, flex-end, column, $gap);
+
     @media (max-width: $lg) {
-      width: 100%;
       align-items: center;
+
+      width: 100%;
     }
 
     &__title {
       padding-right: $gap-x5;
+
       @include text-custom(1.125rem, normal, bold);
 
       @media (max-width: $lg) {

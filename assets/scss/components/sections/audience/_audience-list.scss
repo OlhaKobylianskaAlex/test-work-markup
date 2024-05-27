@@ -2,10 +2,11 @@
 @use "../../../mixins/" as *;
 
 .audience-list {
+  flex-wrap: wrap;
+
   width: 100%;
 
   @include flex(flex-start, space-evently, row, $gap);
-  flex-wrap: wrap;
 
   @media (max-width: $sm) {
     flex-direction: column;
@@ -15,12 +16,11 @@
     width: calc(25% - $gap-x3 / 4);
     padding: $gap-x2 $gap;
 
-    @include flex(center, center, column, 1.5rem);
-
-    background-color: $color-black-light-2;
-
     color: $color-light;
     border-radius: $gap;
+    background-color: $color-black-light-2;
+
+    @include flex(center, center, column, 1.5rem);
 
     @media (max-width: $lg) {
       width: calc(50% - $gap / 2);

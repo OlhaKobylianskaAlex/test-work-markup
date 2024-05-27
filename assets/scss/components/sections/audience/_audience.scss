@@ -10,23 +10,24 @@
     &__content {
       width: 100%;
 
-      background-color: $color-black-light;
       border-radius: 2rem;
+      background-color: $color-black-light;
 
       &-img {
         padding: $gap-x4 $gap-x5;
-        @include flex(space-between, center, column, $gap-x2);
 
         background: url("../img/png/audience/bg.png") no-repeat center bottom;
         background-size: contain;
 
+        @include flex(space-between, center, column, $gap-x2);
+
         @media (max-width: $lg) {
           padding: $gap-x4 3.25rem;
 
-          @include flex(space-between, flex-start, column, $gap-x2);
-
-          background-size: cover;
           background-position-y: 800px;
+          background-size: cover;
+
+          @include flex(space-between, flex-start, column, $gap-x2);
         }
 
         @media (max-width: $sm) {
@@ -35,16 +36,17 @@
 
         @media (max-width: $xs) {
           background: url("../img/png/audience/bg-xs.png") no-repeat center
-            bottom;
-          background-size: contain;
+          bottom;
           background-position-y: 860px;
+          background-size: contain;
         }
       }
     }
   }
 
   &-title {
-    @include title-style;
     text-align: center;
+
+    @include title-style;
   }
 }

@@ -13,8 +13,9 @@
   }
 
   &-title {
-    @include title-style;
     text-align: center;
+
+    @include title-style;
 
     @media (max-width: $sm) {
       font-size: 1.625rem;

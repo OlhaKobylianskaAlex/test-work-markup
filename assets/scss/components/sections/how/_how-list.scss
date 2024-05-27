@@ -2,8 +2,9 @@
 @use "../../../mixins/" as *;
 
 .how-list {
-  @include flex(flex-start, space-evently, row, $gap);
   flex-wrap: wrap;
+
+  @include flex(flex-start, space-evently, row, $gap);
 
   @media (max-width: $lg) {
     flex-direction: column;
@@ -13,12 +14,11 @@
     width: calc(100% / 3 - $gap-x2 / 3);
     padding: $gap-x2;
 
-    @include flex(flex-start, flex-start, column, 1.5rem);
-
-    @include radial(circle at left bottom);
-
     color: $color-light;
     border-radius: 20px;
+
+    @include flex(flex-start, flex-start, column, 1.5rem);
+    @include radial(circle at left bottom);
 
     @media (max-width: $lg) {
       width: 100%;
